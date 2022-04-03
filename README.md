@@ -39,3 +39,10 @@ use Hyperf\Utils\ApplicationContext;
 
 composer require hyperf/guzzle
 
+[guzzle](https://hyperf.wiki/2.0/#/zh-cn/guzzle)
+
+
+### jsonrpc
+
+[jsonrpc](https://hyperf.wiki/2.0/#/zh-cn/json-rpc?id=json-rpc-%e6%9c%8d%e5%8a%a1)
+
