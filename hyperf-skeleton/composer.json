@@ -23,7 +23,7 @@
         "hyperf/db-connection": "~2.2.0",
         "hyperf/elasticsearch": "~2.2.0",
         "hyperf/framework": "~2.2.0",
-        "hyperf/guzzle": "~2.2.0",
+        "hyperf/guzzle": "^2.2",
         "hyperf/http-server": "~2.2.0",
         "hyperf/json-rpc": "~2.2.0",
         "hyperf/logger": "~2.2.0",

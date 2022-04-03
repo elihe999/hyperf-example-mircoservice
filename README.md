@@ -27,3 +27,15 @@ php bin/hyperf.php gen:command ProducerCommand
 [DEBUG] Event Hyperf\Framework\Event\BootApplication handled by Hyperf\ExceptionHandler\Listener\ExceptionHandlerListener listener.
 [DEBUG] Event Hyperf\Framework\Event\BootApplication handled by Hyperf\DbConnection\Listener\RegisterConnectionResolverListener listener.
 
+### applicationcontext
+
+容器实例助手函数功能
+
+```php
+use Hyperf\Utils\ApplicationContext;
+```
+
+### GuzzleHttp
+
+composer require hyperf/guzzle
+
