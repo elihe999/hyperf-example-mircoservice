@@ -4,19 +4,18 @@ use Hyperf\Database\Schema\Schema;
 use Hyperf\Database\Schema\Blueprint;
 use Hyperf\Database\Migrations\Migration;
 
-class CreateApiApplicationTable extends Migration
+class UpdatePassivetaskTable extends Migration
 {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        if (Schema::hasTable('api_application')) {
+        if (Schema::hasTable('passive_task')) {
             echo "exist";
         } else {
-            Schema::create('api_application', function (Blueprint $table) {
-                $table->bigIncrements('id');
-                $table->timestamps();
+            Schema::table('passive_task', function (Blueprint $table) {
+                //
             });
         }
     }
@@ -26,6 +25,8 @@ class CreateApiApplicationTable extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('api_application');
+        Schema::table('passive_task', function (Blueprint $table) {
+            //
+        });
     }
 }

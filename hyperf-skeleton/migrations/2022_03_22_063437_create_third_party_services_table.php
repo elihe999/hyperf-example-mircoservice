@@ -4,17 +4,17 @@ use Hyperf\Database\Schema\Schema;
 use Hyperf\Database\Schema\Blueprint;
 use Hyperf\Database\Migrations\Migration;
 
-class CreateApiApplicationTable extends Migration
+class CreateThirdPartyServicesTable extends Migration
 {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        if (Schema::hasTable('api_application')) {
+        if (Schema::hasTable('third_party_services')) {
             echo "exist";
         } else {
-            Schema::create('api_application', function (Blueprint $table) {
+            Schema::create('third_party_services', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->timestamps();
             });
@@ -26,6 +26,6 @@ class CreateApiApplicationTable extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('api_application');
+        Schema::dropIfExists('third_party_services');
     }
 }

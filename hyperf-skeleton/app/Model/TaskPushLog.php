@@ -4,6 +4,12 @@ declare (strict_types=1);
 namespace App\Model;
 
 /**
+ * @property int $id 
+ * @property int $task_id 
+ * @property string $file 
+ * @property string $dt 
+ * @property int $size 
+ * @property \Carbon\Carbon $created_at 
  */
 class TaskPushLog extends Model
 {
@@ -24,5 +30,5 @@ class TaskPushLog extends Model
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = ['id' => 'integer', 'task_id' => 'integer', 'size' => 'integer', 'created_at' => 'datetime'];
 }
