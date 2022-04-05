@@ -16,6 +16,12 @@ use Hyperf\HttpServer\Contract\RequestInterface;
 use Hyperf\HttpServer\Contract\ResponseInterface;
 use Psr\Container\ContainerInterface;
 
+trait Log{
+    public function test() {
+        echo 'try trait';
+    }
+}
+
 abstract class AbstractController
 {
     /**
@@ -35,4 +41,5 @@ abstract class AbstractController
      * @var ResponseInterface
      */
     protected $response;
+
 }

@@ -13,10 +13,14 @@ namespace App\Controller;
 
 class IndexController extends AbstractController
 {
+
+    use Log;
     public function index()
     {
         $user = $this->request->input('user', 'Hyperf');
         $method = $this->request->getMethod();
+
+        $this->test();
 
         return [
             'method' => $method,
