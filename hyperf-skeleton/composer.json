@@ -13,7 +13,8 @@
     "license": "Apache-2.0",
     "require": {
         "php": ">=7.3",
-        "doctrine/dbal": "^2.6",
+        "doctrine/cache": "^2.1",
+        "doctrine/dbal": "^3.3",
         "hyperf/amqp": "~2.2.0",
         "hyperf/async-queue": "~2.2.0",
         "hyperf/cache": "~2.2.0",
@@ -36,7 +37,11 @@
         "hyperf/rpc-client": "^2.2",
         "hyperf/rpc-server": "^2.2",
         "hyperf/service-governance": "~2.2.0",
-        "hyperf/tracer": "~2.2.0"
+        "hyperf/tracer": "~2.2.0",
+        "symfony/property-access": "^5.4",
+        "symfony/serializer": "^5.4",
+        "symfony/yaml": "^5.4",
+        "vinchan/message-notice": "^1.1"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
