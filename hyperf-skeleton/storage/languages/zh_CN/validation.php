@@ -172,6 +172,7 @@ return [
 
     'attributes' => [
         'fields' => '域',
+        'name'   => '名称'
     ],
     'phone_number' => ':attribute 必须为一个有效的电话号码',
     'telephone_number' => ':attribute 必须为一个有效的手机号码',
