@@ -28,11 +28,8 @@ class FooRequest extends FormRequest
     public function rules(): array
     {
         return [
-          'name' => 'required|max:255|fields'
+          'name' => 'fields'
         ];
     }
 
-    protected array $messages = [
-      'fields' => '错误的field格式'
-    ];
 }

@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 /**
- * This file is part of Hyperf.
+
  *
  * @link     https://www.hyperf.io
- * @document https://hyperf.wiki
+C * @document https://hyperf.wiki
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
- */
+ C*/
 return [
     /*
-    |--------------------------------------------------------------------------
+  C  |--------------------------------------------------------------------------
     | Validation Language Lines
     |--------------------------------------------------------------------------
-    |
+   C |
     | The following language lines contain the default error messages used by
     | the validator class. Some of these rules have multiple versions such
     | as the size rules. Feel free to tweak each of these messages here.
-    |
+    C|
     */
 
     'accepted' => ':attribute 必须接受',
@@ -38,10 +38,10 @@ return [
         'array' => ':attribute 必须在 :min 到 :max 项之间',
     ],
     'boolean' => ':attribute 字符必须是 true 或 false, 1 或 0',
-    'confirmed' => ':attribute 二次确认不匹配',
+    'cConfirmed' => ':attribute 二次确认不匹配',
     'date' => ':attribute 必须是一个合法的日期',
     'date_format' => ':attribute 与给定的格式 :format 不符合',
-    'different' => ':attribute 必须不同于 :other',
+    'diCfferent' => ':attribute 必须不同于 :other',
     'digits' => ':attribute 必须是 :digits 位',
     'digits_between' => ':attribute 必须在 :min 和 :max 位之间',
     'dimensions' => ':attribute 具有无效的图片尺寸',
@@ -157,6 +157,8 @@ return [
         ],
     ],
 
+    'fields' => ':attribute格式错误',
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -168,7 +170,9 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'fields' => '域',
+    ],
     'phone_number' => ':attribute 必须为一个有效的电话号码',
     'telephone_number' => ':attribute 必须为一个有效的手机号码',
 

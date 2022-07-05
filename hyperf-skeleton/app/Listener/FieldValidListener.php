@@ -6,6 +6,7 @@ use Hyperf\Event\Contract\ListenerInterface;
 use Hyperf\Event\Annotation\Listener;
 use Hyperf\Validation\Contract\ValidatorFactoryInterface;
 use Hyperf\Validation\Event\ValidatorFactoryResolved;
+use App\Exception\BusinessException;
 
 /**
  * @Listener
@@ -33,26 +34,25 @@ class FieldValidListener implements ListenerInterface
         $validatorFactory = $event->validatorFactory;
         // 注册了 foo 验证器
         $validatorFactory->extend('fields', function ($attribute, $value, $parameters, $validator) {
-          //var_dump($attribute);
-          //var_dump($value);
+          
           $data = json_decode($value, true);
-          var_dump($data);
             if (!is_array($data)) {
                 return false;
             }
             // 判断key是否存在
             $index = 0;
             foreach($data as $bind => $bind_value) {
-
-                if (!array_key_exists('name', $bind)) {
+                if (!is_array($bind_value) || !array_key_exists('name', $bind_value)) {
                     //$fail('字段索引name不存在,' . $index);
+                    // throw new BusinessException(1, '1');
+                  echo '11111';
                     return false;
                 }
-                if (!array_key_exists('condition', $bind)) {
+                if (!is_array($bind_value) || !array_key_exists('condition', $bind_value)) {
                     // $fail('字段索引condition不存在,' . $index);
                     return false;
                 }
-                if (!array_key_exists('value', $bind)) {
+                if (!is_array($bind_value) || !array_key_exists('value', $bind_value)) {
                     // $fail('字段索引value不存在,' . $index);
                     return false;
                 }

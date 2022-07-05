@@ -19,9 +19,11 @@ class IndexController extends AbstractController
 
     public function index(FooRequest $require)
     {
-        $user = $this->request->input('user', 'Hyperf');
+        // $user = $this->request->input('user', 'Hyperf');
 
         // require
+        $require->validateResolved();
+        $validate = $require->validated();
         // $validate = $require->validated();
         // $method = $this->request->getMethod();
 
